@@ -1,23 +1,6 @@
 // DOM variables
 const main = document.querySelector("main");
 
-const icons = {
-	grass: `<i class="fa-solid fa-leaf"></i>`,
-	fire: `<i class="fa-solid fa-fire"></i>`,
-	water: `<i class="fa-solid fa-droplet"></i>`,
-	bug: `<i class="fa-solid fa-bug"></i>`,
-	poison: `<i class="fa-solid fa-skull-crossbones"></i>`,
-	flying: `<i class="fa-solid fa-feather-pointed"></i>`,
-	normal: `<i class="fa-regular fa-circle"></i>`,
-	electric: `<i class="fa-solid fa-bolt-lightning"></i>`,
-	ground: `<i class="fa-solid fa-mountain"></i>`,
-	fairy: `<i class="fa-solid fa-star"></i>`,
-	ghost: `<i class="fa-solid fa-ghost"></i>`,
-	dragon: `<i class="fa-solid fa-dragon"></i>`,
-	ice: `<i class="fa-solid fa-snowflake"></i>`,
-	fighting: `<i class="fa-solid fa-hand-fist"></i>`,
-	steel: `<i class="fa-solid fa-magnet"></i>`,
-};
 let targetNum = 10;
 
 const createPokemon = (data) => {
@@ -37,7 +20,10 @@ const createPokemon = (data) => {
 
 	types.forEach((type) => {
 		pokeCard.innerHTML += `
-                <p class="poke-type ${type}">${type}</p>
+                <p class="poke-type ${type}">
+                <img src="images/${type}-icon.png" alt="icon for ${type} type" />
+                ${type}
+                </p>
                 `;
 	});
 

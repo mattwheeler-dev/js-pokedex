@@ -1,6 +1,28 @@
 /* Google font import (Nunito @ 200 - 600) */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200..600&display=swap");
 
+/* variables */
+:root {
+	--normal: rgb(149, 151, 149);
+	--fighting: rgb(250, 117, 22);
+	--flying: rgb(121, 176, 235);
+	--posion: rgb(132, 58, 194);
+	--ground: rgb(132, 71, 33);
+	--rock: rgb(165, 159, 119);
+	--bug: rgb(134, 150, 34);
+	--ghost: rgb(99, 57, 100);
+	--fire: rgb(221, 37, 38);
+	--water: rgb(45, 117, 234);
+	--grass: rgb(62, 150, 43);
+	--electric: rgb(246, 184, 31);
+	--psychic: rgb(231, 58, 109);
+	--ice: rgb(70, 210, 254);
+	--dragon: rgb(72, 86, 218);
+	--dark: rgb(70, 57, 55);
+	--steel: rgb(90, 151, 174);
+	--fairy: rgb(229, 100, 230);
+}
+
 * {
 	margin: 0;
 	padding: 0;
