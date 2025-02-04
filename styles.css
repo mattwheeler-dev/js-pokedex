@@ -33,7 +33,7 @@
 body {
 	width: 100dvw;
 	overflow-x: clip;
-	background: linear-gradient(90deg, #00c5ff 0%, #b068c6 100%);
+	background: linear-gradient(90deg, #00a2d3 0%, #9856ad 100%);
 }
 
 h1 {
@@ -45,6 +45,7 @@ h1,
 .poke-name {
 	color: #fff;
 	letter-spacing: 1px;
+	text-shadow: 0 0 0.2rem #000;
 }
 
 main {
@@ -62,8 +63,9 @@ main {
 	margin: 0.5rem 0;
 	padding: 1rem 0;
 	text-transform: capitalize;
-	border: 2px solid #d4d4d490;
+	border: 3px solid #d4d4d490;
 	border-radius: 1rem;
+	box-shadow: 0 0 0.1rem #000;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
