@@ -1,7 +1,7 @@
 // DOM variables
 const main = document.querySelector("main");
 
-let targetNum = 10;
+let targetNum = 110;
 
 const createPokemon = (data) => {
 	const pokeCard = document.createElement("article");
@@ -16,7 +16,7 @@ const createPokemon = (data) => {
 
 	pokeCard.innerHTML = `
 				<p class="poke-num">${data.id}</p>
-				<img src=${data.sprites.front_default} alt="sprite image for ${data.name}" />
+				<img src=${data.sprite} alt="sprite image for ${data.name}" />
 				<p class="poke-name">${data.name}</p>
                 `;
 
@@ -33,11 +33,23 @@ const createPokemon = (data) => {
 };
 
 const getPokemon = async (id) => {
-	const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-	const res = await fetch(url);
-	const data = await res.json();
-	createPokemon(data);
-	console.log(data);
+	const storedPokemon = JSON.parse(localStorage.getItem(id));
+
+	if (storedPokemon) {
+		createPokemon(storedPokemon);
+	} else {
+		const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+		const res = await fetch(url);
+		const data = await res.json();
+		const currentPokemon = {
+			id: data.id,
+			name: data.name,
+			sprite: data.sprites.front_default,
+			types: data.types,
+		};
+		localStorage.setItem(data.id, JSON.stringify(currentPokemon));
+		createPokemon(currentPokemon);
+	}
 };
 
 const createDex = async () => {
