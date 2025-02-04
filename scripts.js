@@ -5,16 +5,18 @@ let targetNum = 10;
 
 const createPokemon = (data) => {
 	const pokeCard = document.createElement("article");
-	pokeCard.classList.add("pokemon");
 	const types = [];
 
 	for (let i = 0; i < data.types.length; i++) {
 		types.push(data.types[i].type.name);
 	}
 
+	pokeCard.classList.add("pokemon");
+	pokeCard.style.backgroundColor = `var(--${types[0]})`;
+
 	pokeCard.innerHTML = `
 				<p class="poke-num">${data.id}</p>
-				<img src=${data.sprites.front_default} alt="sprite image for ${data.name}">
+				<img src=${data.sprites.front_default} alt="sprite image for ${data.name}" />
 				<p class="poke-name">${data.name}</p>
                 `;
 

@@ -6,7 +6,7 @@
 	--normal: rgb(149, 151, 149);
 	--fighting: rgb(250, 117, 22);
 	--flying: rgb(121, 176, 235);
-	--posion: rgb(132, 58, 194);
+	--poison: rgb(132, 58, 194);
 	--ground: rgb(132, 71, 33);
 	--rock: rgb(165, 159, 119);
 	--bug: rgb(134, 150, 34);
@@ -32,13 +32,19 @@
 
 body {
 	width: 100dvw;
-	text-align: center;
 	overflow-x: clip;
 	background: linear-gradient(90deg, #00c5ff 0%, #b068c6 100%);
 }
 
 h1 {
 	margin-top: 1rem;
+	text-align: center;
+}
+
+h1,
+.poke-name {
+	color: #fff;
+	letter-spacing: 1px;
 }
 
 main {
@@ -50,11 +56,45 @@ main {
 }
 
 .pokemon {
-	height: 250px;
 	width: 45%;
+	max-width: 250px;
 	margin: 0.5rem 0;
-	padding-top: 1rem;
+	padding: 1rem 0;
 	text-transform: capitalize;
-	border: 2px solid #bfbfbf7f;
+	border: 2px solid #d4d4d490;
 	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.poke-num {
+	width: fit-content;
+	aspect-ratio: 1;
+	padding: 0 0.5rem;
+	font-size: 1.2rem;
+	font-weight: 600;
+	background-color: #ddd;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+}
+
+.poke-name {
+	font-size: 1.25rem;
+}
+
+.poke-type {
+	margin: 0.25rem 0;
+	padding: 0.2rem 0.5rem;
+	background-color: #ddd;
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.poke-type img {
+	height: 1.25rem;
+	aspect-ratio: 1;
+	margin-right: 0.25rem;
 }
