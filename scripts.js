@@ -1,7 +1,7 @@
 // DOM variables
 const main = document.querySelector("main");
 
-let targetNum = 110;
+let targetNum = 151;
 
 const createPokemon = (data) => {
 	const pokeCard = document.createElement("article");
