@@ -12,7 +12,11 @@ const createPokemon = (data) => {
 	}
 
 	pokeCard.classList.add("pokemon");
-	pokeCard.style.backgroundColor = `var(--${types[0]})`;
+	if (types.length > 1) {
+		pokeCard.style.background = `linear-gradient(to bottom right, var(--${types[0]}) 45%, var(--${types[1]}))`;
+	} else {
+		pokeCard.style.backgroundColor = `var(--${types[0]})`;
+	}
 
 	pokeCard.innerHTML = `
 				<p class="poke-num">${data.id}</p>
