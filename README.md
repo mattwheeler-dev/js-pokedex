@@ -2,7 +2,7 @@
 
 Pokedex web app built with JavaScript
 
-<img src="https://github.com/user-attachments/assets/406c5990-916c-4265-a409-b6317c5cfd30" alt="thumbnail of JavaScript Pokedex web page" width=300 />
+<img src="https://github.com/user-attachments/assets/60354865-5171-4850-a4c3-ebe38c896b05" alt="thumbnail of JavaScript Pokedex web page" width=300 />
 
 Information gathered from <a href="https://pokeapi.co/" target=_blank>PokeApi</a>
 
